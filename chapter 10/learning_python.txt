@@ -1,0 +1,8 @@
+In Python you can store data in Lists.
+In Python you can store data in Tuples.
+In Python you can create forloops which iterate through each item in a list.
+In Python you can create True or False statements about any given information.
+In Python you can create Dictionaries which can house various lists and tuples as well as other information.
+In Python you can create functions which can be given certain parameters to store information.
+In Python you can access text files and copy them to a variable which you create.
+##################################################################################
