@@ -1,0 +1,51 @@
+import unittest
+from employee import Employee
+
+class TestEmployeeStatus(unittest.TestCase):
+    """Tests for the class Employee"""
+
+
+    def setUp(self):
+     """Create a program that records employee information and salary for use in all test methods."""
+
+    company_employees = Employee('john', 'ash')
+    
+
+    def test_current_salary(self):
+        self.company_employees.employee_current_pay()
+
+    def test_give_raise(self):
+        self.company_employees.give_raise(1_000)
+
+    
+if __name__ == '__main__':
+    unittest.main()
+
+
+
+
+
+
+
+
+
+""" company_employees = Employee('john', 'ash')
+
+print("Employee's first name: ")
+company_employees.first_name()
+print("\n")
+
+print("Employee's last name: ")
+company_employees.last_name()
+print("\n")
+
+print("Employee's current salary of the year 2022:")
+company_employees.employee_current_pay()
+print("\n")
+
+print("Employee's raise for the year 2023:")
+company_employees.give_raise(10_000)
+print("\n")
+
+print("Employee's new salary for the year 2023:")
+company_employees.employee_current_pay() """
