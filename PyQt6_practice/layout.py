@@ -1,20 +1,6 @@
 import sys
-
-from PyQt6.QtCore import Qt
+from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QHBoxLayout, QVBoxLayout, QGridLayout, QStackedLayout
 from PyQt6.QtGui import QPalette, QColor
-from PyQt6.QtWidgets import (
-    QApplication,
-    QHBoxLayout,
-    QLabel,
-    QMainWindow,
-    QPushButton,
-    QStackedLayout,
-    QVBoxLayout,
-    QWidget,
-    QTabWidget,
-)
-
-
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -22,14 +8,18 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("My App")
 
-        tabs = QTabWidget()
-        tabs.setTabPosition(QTabWidget.TabPosition.West)
-        tabs.setMovable(True)
+        layout = QStackedLayout()
 
-        for n, color in enumerate(["red", "green", "blue", "yellow"]):
-            tabs.addTab(Color(color), color)
+        layout.addWidget(Color("red"))
+        layout.addWidget(Color("green"))
+        layout.addWidget(Color("blue"))
+        layout.addWidget(Color("yellow"))
 
-        self.setCentralWidget(tabs)
+        layout.setCurrentIndex(3)
+
+        widget = QWidget()
+        widget.setLayout(layout)
+        self.setCentralWidget(widget)
 
 class Color(QWidget):
 
@@ -40,7 +30,6 @@ class Color(QWidget):
         palette = self.palette()
         palette.setColor(QPalette.ColorRole.Window, QColor(color))
         self.setPalette(palette)
-
 
 
 app = QApplication(sys.argv)
