@@ -19,4 +19,4 @@ while True:
     else:
         print("\nThe ticket is $15.")
         
-    
+
