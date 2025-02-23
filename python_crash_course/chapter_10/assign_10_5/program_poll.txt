@@ -1,0 +1,4 @@
+adrian: i dont know
+adrian: creating classes.
+john: writing algorithms.
+cassandra: creating classes.
